@@ -1,0 +1,12 @@
+chunk1 {
+    TimeSignature=4/4
+    Tempo=120
+    Volume=80
+    Guitar(L, do, 1/4)
+    Guitar(L, mi, 1/4)
+    Guitar(L, sol, 1/2)
+    sync {
+        Guitar(L, re, 1/8)
+        Guitar(L, fa, 1/8)
+    }
+}
