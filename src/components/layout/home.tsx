@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 const Home = () => {
   const [response, setResponse] = useState("");
@@ -18,14 +19,19 @@ const Home = () => {
     setIsClient(true);
   }, []);
 
+  const router = useRouter();
+
   if (!isClient) return null;
 
   return (
-    <div>
-      <Button onClick={runPythonScript}>
-        Click for Python script
+    <div className="h-[92vh] flex justify-center items-center">
+      <Button
+        onClick={() => {
+          router.push("/create");
+        }}
+      >
+        Start
       </Button>
-      <p>{response && response}</p>
     </div>
   );
 }
