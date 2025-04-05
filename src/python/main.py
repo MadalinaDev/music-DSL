@@ -1,15 +1,16 @@
 from lexer import Lexer
 from parser import Parser
 from interpreter import MusicInterpreter
+import sys
 
 # Main function to parse and interpret code
 if __name__ == "__main__":
     # Path to the test file
-    file_path = 'test.test'
+    file_path = "C:/Users/user/PROJECTS_UTM/music-DSL/music-dsl/src/python/test.test"
     
-    # Step 1: Read the content of the file
+    # Step 1: Read the chunks
     with open(file_path, 'r') as file:
-        code = file.read()
+            code = file.read()
 
     # Step 2: Tokenize the code using the lexer
     lexer = Lexer(code)
@@ -19,10 +20,10 @@ if __name__ == "__main__":
     parsed_data = parser.parse()
     
     # Step 4: Interpret the parsed data and generate audio
-    interpreter = MusicInterpreter(parsed_data)
-    interpreter.generate_music()
+    # interpreter = MusicInterpreter(parsed_data)
+    # interpreter.generate_music()
     
     # Optional: Export or play the audio
     # For example: Save the generated audio to a file
-    interpreter.final_audio.export("output_music.mp3", format="mp3")
-    print("Music generated and saved to output_music.mp3")
+    # interpreter.final_audio.export("output_music.mp3", format="mp3")
+    # print("Music generated and saved to output_music.mp3")
