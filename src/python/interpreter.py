@@ -94,5 +94,5 @@ class MusicInterpreter:
                     self.handle_guitar(action)
             current_frequency += loop_increment * (loop_condition_frequency - loop_start_frequency) / 7
 
-    def save_to_mp3(self, filename="output.mp3"):
-        self.final_audio.export(filename, format="mp3")  # Export final composition to MP3
+    # def save_to_mp3(self, filename="output.mp3"):
+    #     self.final_audio.export(filename, format="mp3")  # Export final composition to MP3
